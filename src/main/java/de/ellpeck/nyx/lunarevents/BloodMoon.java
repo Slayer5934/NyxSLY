@@ -22,8 +22,6 @@ import net.minecraft.world.WorldEntitySpawner;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
-import net.minecraftforge.fml.common.registry.EntityEntry;
-
 import java.util.Set;
 
 public class BloodMoon extends LunarEvent {

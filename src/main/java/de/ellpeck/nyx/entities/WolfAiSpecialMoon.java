@@ -1,6 +1,5 @@
 package de.ellpeck.nyx.entities;
 
-import com.google.common.base.Predicate;
 import de.ellpeck.nyx.capabilities.NyxWorld;
 import de.ellpeck.nyx.lunarevents.BloodMoon;
 import de.ellpeck.nyx.lunarevents.FullMoon;

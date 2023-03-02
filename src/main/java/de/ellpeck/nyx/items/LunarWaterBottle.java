@@ -1,8 +1,6 @@
 package de.ellpeck.nyx.items;
 
-import de.ellpeck.nyx.Nyx;
 import de.ellpeck.nyx.Registry;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;

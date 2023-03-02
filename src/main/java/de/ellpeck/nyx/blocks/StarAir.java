@@ -2,14 +2,12 @@ package de.ellpeck.nyx.blocks;
 
 import de.ellpeck.nyx.Nyx;
 import de.ellpeck.nyx.Registry;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -20,7 +18,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Random;
 
 public class StarAir extends BlockContainer {
     public StarAir() {

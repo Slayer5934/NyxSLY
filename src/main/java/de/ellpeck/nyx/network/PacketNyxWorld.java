@@ -1,6 +1,5 @@
 package de.ellpeck.nyx.network;
 
-import de.ellpeck.nyx.Registry;
 import de.ellpeck.nyx.capabilities.NyxWorld;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;

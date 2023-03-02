@@ -1,13 +1,9 @@
 package de.ellpeck.nyx.commands;
 
-import de.ellpeck.nyx.capabilities.NyxWorld;
 import de.ellpeck.nyx.entities.FallingMeteor;
-import de.ellpeck.nyx.lunarevents.LunarEvent;
 import net.minecraft.command.*;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
-
-import java.util.Optional;
 
 public class CommandMeteor extends CommandBase {
     @Override

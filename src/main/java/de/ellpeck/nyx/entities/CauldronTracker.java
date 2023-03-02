@@ -5,7 +5,6 @@ import de.ellpeck.nyx.Registry;
 import de.ellpeck.nyx.blocks.LunarWaterCauldron;
 import de.ellpeck.nyx.capabilities.NyxWorld;
 import de.ellpeck.nyx.lunarevents.BloodMoon;
-import de.ellpeck.nyx.lunarevents.FullMoon;
 import de.ellpeck.nyx.lunarevents.HarvestMoon;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCauldron;
@@ -25,8 +24,6 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
-
 import java.util.List;
 
 public class CauldronTracker extends Entity {
