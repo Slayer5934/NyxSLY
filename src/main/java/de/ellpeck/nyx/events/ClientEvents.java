@@ -4,7 +4,6 @@ import de.ellpeck.nyx.Config;
 import de.ellpeck.nyx.Nyx;
 import de.ellpeck.nyx.Registry;
 import de.ellpeck.nyx.capabilities.NyxWorld;
-import de.ellpeck.nyx.enchantments.NyxEnchantment;
 import de.ellpeck.nyx.entities.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -14,10 +13,6 @@ import net.minecraft.client.renderer.RenderGlobal;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
-import net.minecraft.client.renderer.color.IItemColor;
-import net.minecraft.client.resources.I18n;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -28,7 +23,6 @@ import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -37,8 +31,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = Nyx.ID, value = Side.CLIENT)
@@ -98,6 +90,9 @@ public final class ClientEvents {
 
     @SubscribeEvent
     public static void onModelRegistry(ModelRegistryEvent event) {
+    	
+    	RenderingRegistry.registerEntityRenderingHandler(MeteorKat.class, MeteorKatRenderer::new);
+    	
         if (Config.lunarWater) {
             registerFluidRenderer(Registry.lunarWaterFluid);
             RenderingRegistry.registerEntityRenderingHandler(CauldronTracker.class, EmptyRenderer::new);

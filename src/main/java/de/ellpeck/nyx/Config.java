@@ -2,7 +2,6 @@ package de.ellpeck.nyx;
 
 import com.google.common.collect.Sets;
 import de.ellpeck.nyx.capabilities.NyxWorld;
-import de.ellpeck.nyx.lunarevents.LunarEvent;
 import de.ellpeck.nyx.lunarevents.StarShower;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
@@ -49,6 +48,8 @@ public final class Config {
     public static double meteorChanceEnd;
     public static int meteorSpawnRadius;
     public static boolean meteors;
+    public static double meteorKatChance;
+    public static int meteorKatCount;
     public static int meteorDisallowRadius;
     public static int meteorDisallowTime;
     public static Set<String> enchantingWhitelistDimensions;
@@ -97,6 +98,8 @@ public final class Config {
         bloodMoonSpawnRadius = instance.get("bloodMoon", "bloodMoonSpawnRadius", 20, "The closest distance that mobs can spawn away from a player during the blood moon. Vanilla value is 24.").getInt();
         bloodMoonOnFull = instance.get("bloodMoon", "bloodMoonOnFull", true, "If the blood moon should only occur on full moon nights").getBoolean();
 
+        meteorKatChance = instance.get("meteors", "meteorKatChance", 0.25, "The chance per count that a Meteor Kat will spawn").getDouble();
+        meteorKatCount = instance.get("meteors", "meteorKatCount", 3, "The number of times a Meteor Kat will get a chance to spawn").getInt();
         meteors = instance.get("meteors", "meteors", true, "If meteor content should be enabled").getBoolean();
         meteorChance = instance.get("meteors", "meteorChance", 0.00014, "The chance of a meteor spawning every second, during the day").getDouble();
         meteorChanceNight = instance.get("meteors", "meteorChanceNight", 0.0024, "The chance of a meteor spawning every second, during nighttime").getDouble();

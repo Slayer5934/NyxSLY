@@ -1,5 +1,6 @@
 package de.ellpeck.nyx.entities;
 
+import de.ellpeck.nyx.Config;
 import de.ellpeck.nyx.Nyx;
 import de.ellpeck.nyx.Registry;
 import de.ellpeck.nyx.capabilities.NyxWorld;
@@ -111,6 +112,15 @@ public class FallingMeteor extends FallingStar {
                         }
                     }
                 }
+                
+                for (int katcount = 0; katcount < Config.meteorKatCount; katcount++) {
+                	if(Math.random() < Config.meteorKatChance) {
+                        MeteorKat kat = new MeteorKat(world);
+                        kat.setPosition(this.posX, this.posY + 1, this.posZ);
+            			world.spawnEntity(kat);
+                	}
+                }
+                
                 data.sendToClients();
                 this.setDead();
 

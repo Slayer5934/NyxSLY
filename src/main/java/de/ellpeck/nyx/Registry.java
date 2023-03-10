@@ -7,6 +7,7 @@ import de.ellpeck.nyx.enchantments.LunarShield;
 import de.ellpeck.nyx.entities.CauldronTracker;
 import de.ellpeck.nyx.entities.FallingMeteor;
 import de.ellpeck.nyx.entities.FallingStar;
+import de.ellpeck.nyx.entities.MeteorKat;
 import de.ellpeck.nyx.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -191,12 +192,17 @@ public final class Registry {
     }
 
     public static void preInit() {
+    	
+    	int id = 0;
+    	
+    	EntityRegistry.registerModEntity(new ResourceLocation(Nyx.ID, "meteor_kat"), MeteorKat.class, Nyx.ID + ".meteor_kat", id++, Nyx.instance, 80, 3, true, 2239283, 884535);
+    	
         if (Config.lunarWater)
-            EntityRegistry.registerModEntity(new ResourceLocation(Nyx.ID, "cauldron_tracker"), CauldronTracker.class, Nyx.ID + ".cauldron_tracker", 0, Nyx.instance, 64, 20, false);
+            EntityRegistry.registerModEntity(new ResourceLocation(Nyx.ID, "cauldron_tracker"), CauldronTracker.class, Nyx.ID + ".cauldron_tracker", id++, Nyx.instance, 64, 20, false);
         if (Config.fallingStars)
-            EntityRegistry.registerModEntity(new ResourceLocation(Nyx.ID, "falling_star"), FallingStar.class, Nyx.ID + ".falling_star", 1, Nyx.instance, 128, 1, true);
+            EntityRegistry.registerModEntity(new ResourceLocation(Nyx.ID, "falling_star"), FallingStar.class, Nyx.ID + ".falling_star", id++, Nyx.instance, 128, 1, true);
         if (Config.meteors) {
-            EntityRegistry.registerModEntity(new ResourceLocation(Nyx.ID, "falling_meteor"), FallingMeteor.class, Nyx.ID + ".falling_meteor", 2, Nyx.instance, 256, 1, true);
+            EntityRegistry.registerModEntity(new ResourceLocation(Nyx.ID, "falling_meteor"), FallingMeteor.class, Nyx.ID + ".falling_meteor", id++, Nyx.instance, 256, 1, true);
             meteorToolMaterial = EnumHelper.addToolMaterial("NYX:METEOR", 3, (int) (1561 * 1.5F), 7, 7, 18);
             meteorArmorMaterial = EnumHelper.addArmorMaterial("NYX:METEOR", Nyx.ID + ":meteor", (int) (33 * 1.5F), new int[]{4, 8, 10, 4}, 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3);
         }
