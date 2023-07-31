@@ -13,7 +13,7 @@ apply plugin: 'maven'
 
 version = "1.4.3"
 group = "de.ellpeck.nyx"
-archivesBaseName = "Nyx SLY"
+archivesBaseName = "Nyx Fork Xyn"
 
 if (System.getenv('BUILD_NUMBER') != null) {
     version += "." + System.getenv('BUILD_NUMBER')

@@ -1,13 +1,13 @@
 [
     {
         "modid": "nyx",
-        "name": "Nyx",
-        "description": "A mod about effects of the moon",
+        "name": "Nyx Fork Xyn",
+        "description": "A mod about effects of the moon, and meteor kats.",
         "version": "${version}",
         "mcversion": "${mcversion}",
-        "url": "http://github.com/Ellpeck/Nyx",
+        "url": "https://github.com/Slayer5934/NyxSLY",
         "updateUrl": "",
-        "authorList": ["Ellpeck"],
+        "authorList": ["Ellpeck", "Slayer5934"],
         "credits": "Commission for Drakallen",
         "logoFile": "",
         "screenshots": [
